@@ -17,9 +17,9 @@ const Dashboard = () => {
   return (
     <div className="container">
       <h1>Data Processing Dashboard</h1>
-      {console.log("DATA:", data)};
+      {/* {console.log("DATA:", data)};
       {console.log("ERRORS:", errors)};
-      {console.log("SUMMARY:", data?.result?.summary)};
+      {console.log("SUMMARY:", data?.result?.summary)}; */}
 
       <UploadForm setData={setData} setErrors={setErrors} />
 
