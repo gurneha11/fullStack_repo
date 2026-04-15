@@ -3,6 +3,7 @@ import cors from 'cors';
 import { logger } from './middleware/logger.js';
 import { errorHandler } from './middleware/errorMiddleware.js';
 import uploadRoutes from './routes/uploadRoutes.js';
+import fs from "fs";
 
 const app = express();
 
