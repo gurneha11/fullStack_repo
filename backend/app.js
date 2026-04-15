@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+if (!fs.existsSync("/tmp/uploads")) {
+  fs.mkdirSync("/tmp/uploads", { recursive: true });
+}
+
 app.use(logger);
 
 app.use('/upload', uploadRoutes);

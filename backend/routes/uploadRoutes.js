@@ -3,8 +3,9 @@ import multer from 'multer';
 import { handleUpload } from '../controllers/uploadController.js';
 
 const router = express.Router();
-const upload = multer({ dest: 'uploads/' });
-debugger;
+//const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: "/tmp/uploads" });
+
 
 router.post(
     '/',
