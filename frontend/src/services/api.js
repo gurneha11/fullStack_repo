@@ -2,7 +2,8 @@ import axios from "axios";
 
 const API = axios.create({
   //baseURL: "http://localhost:5000"
-  baseURL: "https://your-app.onrender.com"
+  //baseURL: "https://your-app.onrender.com"
+  baseURL: "https://fullstack-repo-1-86su.onrender.com"
 });
 
 export const uploadFiles = async (formData) => {
