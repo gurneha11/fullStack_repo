@@ -8,7 +8,7 @@ const API = axios.create({
 export const uploadFiles = async (formData) => {
   try {
     const res = await API.post("/upload", formData, {
-      headers: { "Content-Type": "multipart/form-data" }
+      //headers: { "Content-Type": "multipart/form-data" }
     });
     return res.data;
   } catch (err) {
