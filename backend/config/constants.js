@@ -1,4 +1,4 @@
-debugger;
+
 export const REQUIRED_FIELDS = {
     EXISTING: ["Component_ID"],
     NEW: ["Component_ID"],

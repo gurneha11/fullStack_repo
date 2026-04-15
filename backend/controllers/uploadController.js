@@ -4,7 +4,6 @@ import { processData } from '../services/dataService.js';
 import { REQUIRED_FIELDS, UNIQUE_FIELDS } from '../config/constants.js';
 
 const validateFileName = (file, expectedName) => {
-    debugger;
     const fileName = file.originalname.toLowerCase();
 
     if (!fileName.includes(expectedName.toLowerCase())) {
@@ -13,7 +12,6 @@ const validateFileName = (file, expectedName) => {
 };
 
 const validateFileType = (data, requiredFields, fileName) => {
-    debugger;
     if (!Array.isArray(data) || data.length === 0) {
         throw new Error(`${fileName} file is empty or invalid`);
     }
@@ -32,7 +30,6 @@ const validateFileType = (data, requiredFields, fileName) => {
 };
 
 export const handleUpload = (req, res, next) => {
-    debugger;
     try {
         if (!req.files) {
             throw new Error("Files not uploaded");

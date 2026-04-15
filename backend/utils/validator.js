@@ -5,7 +5,6 @@ export const validateData = (
 ) => {
   const errors = [];
 
-  debugger;
 
   if (!Array.isArray(data) || data.length === 0) {
     return [

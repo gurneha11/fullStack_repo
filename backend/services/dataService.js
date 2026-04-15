@@ -1,6 +1,5 @@
 const buildMap = (data, key) => {
   const map = new Map();
-  debugger;
   for (const row of data) {
     const value = row?.[key];
     if (value) map.set(value, row);
@@ -9,7 +8,6 @@ const buildMap = (data, key) => {
 };
 
 const aggregateSales = (data) => {
-  debugger;
   const salesMap = new Map();
 
   for (const row of data) {
@@ -25,7 +23,6 @@ const aggregateSales = (data) => {
 };
 
 const linkComponents = (existingMap, newMap) => {
-  debugger;
   const linked = [];
   const unmatchedExisting = [];
   const unmatchedNew = [];
@@ -61,7 +58,6 @@ const linkComponents = (existingMap, newMap) => {
 };
 
 const buildMatchedRecords = (linked, salesMap) => {
-  debugger;
   return linked.map((item) => {
     const sku =
       item?.existing?.Product_SKU ||
@@ -78,7 +74,6 @@ const buildMatchedRecords = (linked, salesMap) => {
 };
 
 const groupBySKU = (linked, salesMap) => {
-  debugger;
   const skuMap = new Map();
 
   for (const item of linked) {
@@ -110,7 +105,6 @@ const groupBySKU = (linked, salesMap) => {
 };
 
 const getUnmatchedSales = (groupedData, salesMap) => {
-  debugger;
   const usedSkus = new Set(
     groupedData.map((item) => item.Product_SKU)
   );
@@ -134,7 +128,6 @@ export const processData = (
   newData = [],
   salesData = []
 ) => {
-  debugger;
 
   const existingMap = buildMap(existingData, "Component_ID");
   const newMap = buildMap(newData, "Component_ID");
